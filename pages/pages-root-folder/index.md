@@ -8,12 +8,11 @@ layout: frontpage
 
 widget1:
   title: "About me"
-  url: 'http://phlow.github.io/feeling-responsive/info/'
+  url: 'http://lucymli.github.io/about/'
   text: 'CV and research interests'
 widget2:
   title: "Blog"
   url: 'http://lucymli.github.io/blog/'
-  image: widget-1-302x182.jpg
   text: 'Commentaries and tutorials.'
 widget3:
   title: "Projects"

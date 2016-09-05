@@ -3,7 +3,7 @@ layout: page
 title: "About"
 subheadline: ""
 teaser: "Lucy M Li"
-permalink: "/info/"
+permalink: "/about/"
 
 ---
 
