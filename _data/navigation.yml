@@ -6,8 +6,8 @@
   url: "/projects/"
   side: left
   dropdown:
-  - title: "Page/Post"
-    url: "/design/page/"
+  - title: "Phylodynamics"
+    url: "/projects/phylodynamics/"
 
 
 - title: Blog
