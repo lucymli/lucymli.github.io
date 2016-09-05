@@ -40,10 +40,6 @@ improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
 #
 urlimg: 'https://lucymli.github.io/assets/img'
 
-
-# Logo size is 600x80 pixels
-logo: "logo.png"
-
 # Gems
 gems:
     - jekyll-asciidoc
