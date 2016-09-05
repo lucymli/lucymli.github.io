@@ -1,7 +1,7 @@
 - name: GitHub
   url: http://github.com/lucymli
   class: icon-github
-  title: Code
+  title: "Code"
 
 - name: Twitter
   url: http://twitter.com/lucylmq
@@ -12,6 +12,11 @@
   url: https://www.linkedin.com/in/lucymli
   class: icon-linkedin
   title: "Add me on LinkedIn"
+
+- name: Email
+  url: ml3109@ic.ac.uk
+  class: icon-mail
+  title: "Contact me via email"
 
 # - name: Facebook
 #   url: http://www.facebook.com/
