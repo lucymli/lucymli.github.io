@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Epidemiological inference in the presence of superspreading using both incidence time series and pathogen phylogeny</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+  <meta name="date" content="2016-09-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="stylesheet" media="all" href="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/fonts/fonts.css">
+
+  <link rel="stylesheet" media="all" href="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/theme/css/phone.css">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Epidemiological inference in the presence of superspreading using both incidence time series and pathogen phylogeny',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                      },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Lucy M Li' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+
+</head>
+
+<body style="opacity: 0">
+
+<slides>
+
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;">12 September 2016</p>
+          </hgroup>
+  </slide>
+
+<slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Background</h2></hgroup><article  id="background">
+
+</article></slide><slide class=''><hgroup><h2>Stochasticity in disease transmission</h2></hgroup><article  id="stochasticity-in-disease-transmission">
+
+<ul>
+<li>Important in outbreak settings and for sparsely sampled infectious diseases</li>
+<li>Heterogeneity in transmission rates &#8211;&gt; overdispersed offspring distribution</li>
+</ul>
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/overdispersion-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2>Incorporating genetic data in epidemiological inference</h2></hgroup><article  id="incorporating-genetic-data-in-epidemiological-inference">
+
+<ul>
+<li>Contact tracing information is necessary to directly measure the overdispersion of the offspring distribution - not available for sparsely sampled diseases</li>
+<li>Overdispersion could be estimated from genetic data as it affects pathogen diversity</li>
+<li>Using population genetic models such as the coalescent, we can estimate the effective number of infections \(N_e\), is related to the true number of infections via the offspring distribution</li>
+</ul>
+
+
+
+</article></slide><slide class=''><hgroup><h2>Phylodynamic inference in epidemiology</h2></hgroup><article  id="phylodynamic-inference-in-epidemiology">
+
+
+
+</article></slide><slide class=''><hgroup><h2>Aims</h2></hgroup><article  id="aims">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/MLBayes-1.png' title=''/><!-- --></p>
+
+<ul>
+<li>Bayesian inference of epidemiological parameters by fitting to epidemiologic and genetic data simultaneously</li>
+<li>Quantify heterogeneity in transmission rates</li>
+<li>Account for stochasticity by using particle filtering to approximate the likelihood</li>
+<li>Infer latent variables such as incidence of undetected infections</li>
+<li>Incorporate phylogenetic uncertainty</li>
+</ul>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Method</h2></hgroup><article  id="method">
+
+</article></slide><slide class=''><hgroup><h2>Simulation pipeline</h2></hgroup><article  id="simulation-pipeline">
+
+<!-- \begin{columns} -->
+
+<!-- \begin{column}{0.38\textwidth} -->
+
+<!-- \begin{itemize} -->
+
+<!-- \item SIR model with an explicit offspring distribution -->
+
+<!-- \item For $R_0={2, 5}$, $k={0.1, 1, 10}$, reporting rate $\rho={0.01, 0.1}$ -->
+
+<!-- \item Single infector introduced to a wholly susceptible population with 20,000 people -->
+
+<!-- \item 5 replicate simulations -->
+
+<!-- \end{itemize} -->
+
+<!-- \end{column} -->
+
+<!-- \begin{column}{0.58\textwidth} -->
+
+<!-- \begin{figure} -->
+
+<!--    \includegraphics{method_diagram.pdf} -->
+
+<!-- \end{figure} -->
+
+<!-- \end{column} -->
+
+<!-- \end{columns} -->
+
+</article></slide><slide class=''><hgroup><h2>Particle MCMC</h2></hgroup><article  id="particle-mcmc">
+
+<p>Particle MCMC (Andrieu et al 2010):</p>
+
+<!-- ![](pfilter.png) -->
+
+</article></slide><slide class=''><hgroup><h2>Coalescent likelihood calculation</h2></hgroup><article  id="coalescent-likelihood-calculation">
+
+<ul>
+<li>\(\tau\sim\) Exp \((\lambda)\)</li>
+<li>\(f_G(\tau) = \lambda e^{-\lambda \tau}\)</li>
+<li>\(\tau\) = time until next coalescent event</li>
+<li>\(\lambda\) = rate of coalescence</li>
+</ul>
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/rtree-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2>Coalescent likelihood calculation</h2></hgroup><article  id="coalescent-likelihood-calculation-1">
+
+
+
+<ul>
+<li>\(l\) number of lineages at time \(t\)</li>
+<li>\(N_e\) effective number of infections</li>
+<li>\(R_e\) effective reproductive number</li>
+<li>\(k\) dispersion of a negative binomial offspring distribution</li>
+<li>\(N\) number of infectious individuals</li>
+<li>\(T_g\) generation time</li>
+</ul>
+
+<p>(Fraser et al, unpublished)</p>
+
+</article></slide><slide class=''><hgroup><h2>Likelihood of epidemiologic data</h2></hgroup><article  id="likelihood-of-epidemiologic-data">
+
+<ul>
+<li>\(x\sim\) Binomial (I, \(\rho\))</li>
+<li>I = number of new infections (reported + unreported cases)</li>
+<li>\(\rho\) = reporting rate</li>
+</ul>
+
+
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Results: simulations</h2></hgroup><article  id="results-simulations">
+
+</article></slide><slide class=''><hgroup><h2>R0</h2></hgroup><article  id="r0">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/largepopR0-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2>k</h2></hgroup><article  id="k">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/largepopk-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2>Date of first infection</h2></hgroup><article  id="date-of-first-infection">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/largepopstart-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2>Reporting rate</h2></hgroup><article  id="reporting-rate">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/largepoprho-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2> Epidemic history (incidence over time)</h2></hgroup><article  id="epidemic-history-incidence-over-time">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/epihistoryR02-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2>Accuracy of trajectories</h2></hgroup><article  id="accuracy-of-trajectories">
+
+<p>Correlation between inferred epidemic history and true epidemic history was calculated using Pearson&#39;s correlation.</p>
+
+<p>Using genetic data alone led to marginally more uncertainty in epidemic history compared to inference including epidemiologic data.</p>
+
+
+
+</article></slide><slide class=''><hgroup><h2>Why estimate k?</h2></hgroup><article  id="why-estimate-k">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/fixed_k_plots1-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2>Phylogenetic uncertainty</h2></hgroup><article  id="phylogenetic-uncertainty">
+
+<ul>
+<li>Sampled from Bayesian posterior distribution of phylogenies, and re-estimated parameters using each sampled tree</li>
+</ul>
+
+<!-- ![](R0_multitree.pdf) -->
+
+</article></slide><slide class=''><hgroup><h2>Phylogenetic uncertainty</h2></hgroup><article  id="phylogenetic-uncertainty-1">
+
+<!-- ![](start_date_multitree.pdf) -->
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Results: Poliovirus</h2></hgroup><article  id="results-poliovirus">
+
+</article></slide><slide class=''><hgroup><h2>Data</h2></hgroup><article  id="data">
+
+<ul>
+<li>Large outbreak of poliovirus 1 in Tajikistan in 2010 (over 500 reported cases)</li>
+<li>116 viral sequences were obtained (Yakovenko et al 2014)</li>
+<li>Maximum likelihood parameters values were inferred using reported case time-series, with a fixed reporting rate of 1 in 200 (Blake et al 2014)</li>
+</ul>
+
+<p>Aim:</p>
+
+<ul>
+<li>Incorporating viral sequences in inference</li>
+<li>Estimate reporting rate and other parameters while accounting for stochasticity</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Parameter inference</h2></hgroup><article  id="parameter-inference">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/Tajikistan_plot-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Conclusions</h2></hgroup><article  id="conclusions">
+
+</article></slide><slide class=''><hgroup><h2>Take-home messages</h2></hgroup><article  id="take-home-messages">
+
+<ul>
+<li>Estimation of k is only possible when genetic data are used</li>
+<li>Agreement between parameter estimates using epidemiologic and/or genetic data</li>
+<li>More precise estimates of R0 when both epi and genetic data are used</li>
+<li>Application to poliovirus data revealed some discrepancies in parameter estimates when incorporating genetic data during inference, although estimates are largely consistent</li>
+<li>Phylogenetic uncertainty could be incorporated</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Ongoing work</h2></hgroup><article  id="ongoing-work">
+
+<p>Analysis of data:</p>
+
+<ul>
+<li>Environmental poliovirus in Pakistan</li>
+<li>Nigeria cVDPV2</li>
+<li>Ebola outbreak in Liberia</li>
+</ul>
+
+<p>Code: github.com/lucymli/EpiGenMCMC</p>
+
+</article></slide><slide class=''><hgroup><h2>Acknowledgements</h2></hgroup><article  id="acknowledgements">
+
+<ul>
+<li>Professors Christophe Fraser and Nicholas Grassly</li>
+<li>Evolutionary Epidemiology Research Group</li>
+<li>Vaccine Epidemiology Research Group</li>
+</ul>
+
+<p>Data:</p>
+
+<ul>
+<li>CDC and Professor Vadim Agol (MSU)</li>
+</ul>
+
+<p>Funding:</p>
+
+<ul>
+<li>MRC studentship</li>
+<li>Imperial HPC resources funded by UK MED-BIO (an MRC project)</li>
+</ul>
+
+<center>
+
+<img src="Imperial.png" height="20%" width="20%">               <img src="MRC.png" height="15%" width="15%">
+
+</center></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script src="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+<script src="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+<script src="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+<script src="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+<script src="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/js/hammer.js"></script>
+<script src="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/js/slide-controller.js"></script>
+<script src="2016-09-12_Harvard_CCDD_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
