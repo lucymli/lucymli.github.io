@@ -1,12 +1,17 @@
 ---
 layout: page
-title: "Contact"
+title: "Contact Me"
 meta_title: "Contact and use our contact form"
-subheadline: "Wufoo-powered contact forms"
-teaser: "Get in touch with me? Use the contact form."
+subheadline: ""
+teaser: ""
 permalink: "/contact/"
 ---
-If you need a fabulous contact form for your website, I suggest you use [Wufoo][1]. You can use three forms for free, you get no spam and if you get more than 100 entries you have to pay.
+Get in touch via [email][1], [Twitter][2] or [LinkedIn][3].
+
+Code from projects is hosted on [Github][4].
 
 
- [1]: http://www.wufoo.com/
+[1]: mailto:ml3109@ic.ac.uk
+[2]: https://www.twitter.com/lucylmq
+[3]: https://www.linkedin.com/in/lucymli
+[4]: http://github.com/lucymli
