@@ -1,0 +1,16 @@
+.title-slide hgroup h1 {
+  font-size: 46px;
+  letter-spacing: 0;
+}
+
+.title-slide {
+  background-image: url(Imperial.png) !important;
+  background-size: 200px !important;
+  background-repeat: no-repeat !important;
+  background-position: 93.1% 4% !important;
+}
+
+
+slides > slide.backdrop {
+  background: white;
+}
