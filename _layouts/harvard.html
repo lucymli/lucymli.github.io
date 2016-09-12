@@ -144,7 +144,7 @@
 
 </article></slide><slide class=''><hgroup><h2>Bayesian parameter inference</h2></hgroup><article  id="bayesian-parameter-inference">
 
-<p>Overall aim: obtain posterior estimates of epidemiological parameters</p>
+<p>Overall aim: obtain posterior estimates of epidemiological parameters <!-- for sparsely sampled epidemics --></p>
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/bayes_infer_posterior-1.png' title=''/><!-- --></p>
 
@@ -402,9 +402,26 @@
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/fixed_k_plots1-1.png' title=''/><!-- --></p>
 
-</article></slide><slide class=''><hgroup><h2>Phylogenetic uncertainty</h2></hgroup><article  id="simulation-results-phylogenetic-uncertainty">
+</article></slide><slide class=''><hgroup><h2>4. Simulation results: Phylogenetic uncertainty</h2></hgroup><article  id="simulation-results-phylogenetic-uncertainty">
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/multitree_plot-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class=''><hgroup><h2>Assessment of inference using PMCMC</h2></hgroup><article  id="assessment-of-inference-using-pmcmc">
+
+<p>Pros:</p>
+
+<ul>
+<li>Exact estimate of the marginal likelihood</li>
+<li>Applicable to a wide-range of models, as long as they can be simulated</li>
+<li>Parallelisable</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+<li>Computational requirements increases with model complexity, simulation time steps and stochasticity</li>
+<li>Often not feasible on a laptop</li>
+</ul>
 
 </article></slide><slide class=''><hgroup><h2>Take-home messages</h2></hgroup><article  id="take-home-messages">
 
