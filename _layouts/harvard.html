@@ -166,13 +166,8 @@
 
 <ul>
 <li>\(\lambda = \frac{1}{N}\) (Kingman 1982) <!-- - $N$ is the number of infected individuals over time --> <!-- - Likelihood: $P($times to coalescent and LTT $|N)$ --></li>
-<li>BEAST is the most population phylodynamic tool (Drummond et al 2012; Bouckaert et al 2014)
-
-<ul>
-<li>Currently only implements simple, deterministic coalescent models</li>
-</ul></li>
-<li>Baysian skyline not informative of parameter values</li>
-<li>Plug-and-play method possible, e.g. Volz &amp; Pond (2014) fit stochastic SEIR model to Ebola phylogenies</li>
+<li>BEAST is the most popular phylodynamic tool (Drummond et al 2012; Bouckaert et al 2014) <!-- - Currently only implements simple, deterministic coalescent models --> <!-- - Bayesian skyline not informative of parameter values --></li>
+<li>Or plug-and-play approach, e.g. Volz &amp; Pond (2014) fit stochastic SEIR model to Ebola phylogenies</li>
 </ul>
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/rtree-1.png' title=''/><!-- --></p>
@@ -181,9 +176,14 @@
 
 </article></slide><slide class=''><hgroup><h2>Combining epidemiologic and coalescent analyses</h2></hgroup><article  id="combining-epidemiologic-and-coalescent-analyses">
 
+<!-- - Both incidence time series and pathogen phylogenies are informative of underlying epidemiology -->
+
 <ul>
-<li>Both incidence time series and pathogen phylogenies are informative of underlying epidemiology</li>
-<li>Assuming independent sampling: \(L(\) Parameters \(|\) Data \()\) = \(L(\) Parameters \(|\) Epi Data \()\) \(L(\) Parameters \(|\) Phylogeny \()\)</li>
+<li>Assuming independent sampling:
+
+<ul>
+<li>\(L(\) Parameters \(\theta |\) Data \()\) = \(L(\theta\) \(|\) Epi Data \()\) \(L(\theta\) \(|\) Phylogeny \()\)</li>
+</ul></li>
 <li>Rasmussen et al (2011) demonstrated that using both sources of data to estimate \(R_0\) reduced uncertainty
 
 <ul>
@@ -329,21 +329,18 @@
 
 </article></slide><slide class=''><hgroup><h2>Our work</h2></hgroup><article  id="our-work">
 
-<ul>
-<li>Quantifying the extent of superspreading
+<!-- - Quantifying the extent of superspreading -->
+
+<!--     - is necessary for accurate inference from phylogenetic data -->
+
+<!--     - has implication for effectiveness of control measures -->
 
 <ul>
-<li>is necessary for accurate inference from phylogenetic data</li>
-<li>has implication for effectiveness of control measures</li>
-</ul></li>
-<li>We aimed to build an inference framework that fit stochastic models with explicit offspring distribution to both epidemiologic and phylogenetic data
-
-<ul>
-<li>Assess contribution of phylogenetic data to epidemiological inference, especially with respect to quantifying superspreading</li>
-<li>Incorporate phylogenetic uncertainty</li>
-</ul></li>
-<li>EpiGenMCMC - C++ program that implements PMCMC</li>
-<li>EpiGenR - R package for generating input files / analysing output</li>
+<li>Build an inference framework to fit stochastic models with explicit offspring distribution to both epidemiologic and phylogenetic data</li>
+<li>Assess contribution of phylogenetic data to epidemiological inference, especially with respect to quantifying \(k\)</li>
+<li><p>Incorporate phylogenetic uncertainty</p></li>
+<li>C++ Code: github.com/lucymli/EpiGenMCMC</li>
+<li><p>R package: EpiGenR</p></li>
 </ul>
 
 </article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>3. PMCMC</h2></hgroup><article  id="pmcmc">
@@ -354,11 +351,17 @@
 
 <!-- Due to nonlinear dynamics, hard to write down the likelihood of parameters given data. But it's fairly trivial using an epidemic trajectories -->
 
-</article></slide><slide class=''><hgroup><h2>3. PMCMC</h2></hgroup><article  id="pmcmc-1">
+</article></slide><slide class=''><hgroup><h2>Particle filtering</h2></hgroup><article  id="particle-filtering">
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/particle_filtering-1.png' title=''/><!-- --></p>
 
-</article></slide><slide class=''><hgroup><h2>4. Simulation results</h2></hgroup><article  id="simulation-results">
+</article></slide><slide class=''><hgroup><h2>Particle filtering</h2></hgroup><article  id="particle-filtering-1">
+
+<p><img src='2016-09-12_Harvard_CCDD_files/figure-html/particle_filtering2-1.png' title=''/><!-- --></p>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>4. Simulation results</h2></hgroup><article  id="simulation-results">
+
+</article></slide><slide class=''><hgroup><h2>Simulated data</h2></hgroup><article  id="simulated-data">
 
 <ul>
 <li>SIR model with an explicit offspring distribution</li>
@@ -370,33 +373,31 @@
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/method_diagram-1.png' title=''/><!-- --></p>
 
-</article></slide><slide class=''><hgroup><h2>4. Simulation results</h2></hgroup><article  id="simulation-results-1">
+</article></slide><slide class=''><hgroup><h2>Genetic data most informative of \(k\)</h2></hgroup><article  id="genetic-data-most-informative-of-k">
 
 <!-- k -->
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/largepopk-1.png' title=''/><!-- --></p>
 
-</article></slide><slide class=''><hgroup><h2>4. Simulation results</h2></hgroup><article  id="simulation-results-2">
+</article></slide><slide class=''><hgroup><h2>\(R_0\) estimates: slight reduction in uncertainty</h2></hgroup><article  id="r_0-estimates-slight-reduction-in-uncertainty">
 
 <!-- R0  -->
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/largepopR0-1.png' title=''/><!-- --></p>
 
-</article></slide><slide class=''><hgroup><h2>4. Simulation results</h2></hgroup><article  id="simulation-results-3">
+</article></slide><slide class=''><hgroup><h2>Similar estimates of epidemic start date</h2></hgroup><article  id="similar-estimates-of-epidemic-start-date">
 
 <!-- Date of first infection -->
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/largepopstart-1.png' title=''/><!-- --></p>
 
-</article></slide><slide class=''><hgroup><h2>4. Simulation results</h2></hgroup><article  id="simulation-results-4">
+</article></slide><slide class=''><hgroup><h2>Similar estimates of reporting rate</h2></hgroup><article  id="similar-estimates-of-reporting-rate">
 
 <!-- Reporting rate -->
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/largepoprho-1.png' title=''/><!-- --></p>
 
-</article></slide><slide class=''><hgroup><h2>4. Simulation results</h2></hgroup><article  id="simulation-results-5">
-
-<p>Biased estimate of \(R_0\) when \(k\) was fixed to the wrong value</p>
+</article></slide><slide class=''><hgroup><h2>Biased estimate of \(R_0\) if wrong assumption about \(k\)</h2></hgroup><article  id="biased-estimate-of-r_0-if-wrong-assumption-about-k">
 
 <p><img src='2016-09-12_Harvard_CCDD_files/figure-html/fixed_k_plots1-1.png' title=''/><!-- --></p>
 
@@ -425,10 +426,15 @@
 </article></slide><slide class=''><hgroup><h2>Data</h2></hgroup><article  id="data">
 
 <ul>
-<li>Large outbreak of poliovirus 1 in Tajikistan in 2010 (over 500 reported cases)</li>
+<li>Over 500 reported cases of type-1 polio in Tajikistan in 2010</li>
 <li>116 viral sequences were obtained (Yakovenko et al 2014)</li>
 <li>Maximum likelihood parameters values were inferred using reported case time-series, with a fixed reporting rate of 1 in 200 (Blake et al 2014)</li>
-<li>Data provided by Professor Vadim Agol at Moscow State University and CDC</li>
+</ul>
+
+<p><br></p>
+
+<ul>
+<li>Data provided by Professor Vadim Agol and colleagues at Moscow State University and CDC</li>
 </ul>
 
 <!-- Aim:  -->
