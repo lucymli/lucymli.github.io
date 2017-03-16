@@ -2,21 +2,23 @@
 layout: page
 title: "About"
 subheadline: ""
-teaser: "Lucy M Li, infectious disease epidemiologist"
+teaser: "Lucy M Li"
 permalink: "/about/"
 
 ---
+
+Infectious disease epidemiologist using various statistical methods to infer the dynamics of disease transmission from data
 
 ## Research Interests
 
 * Mathematical modeling of infectious disease transmission
 * Statistical inference
 * Sequential Monte Carlo methods
-* Reproducible research
+* Phylodynamics
 
 ## Positions
 
-* Post-doctoral research fellow at [Center for Communicable Disease Dynamics](http://ccdd.hsph.harvard.edu/), Harvard T.H. Chan School of Public Health
+* Post-doctoral research fellow at [Center for Communicable Disease Dynamics](http://ccdd.hsph.harvard.edu/), Harvard T.H. Chan School of Public Health (current)
 
 ## Education
 

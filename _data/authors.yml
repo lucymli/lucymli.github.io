@@ -7,8 +7,8 @@
 # Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
 lucymli: # replace this with your info
   name: "Lucy M Li"
-  siterole: "Infectious disease epidemiologist. R Markdown enthusiast."
+  siterole: "Infectious disease epidemiologist"
   uri: https://lucymli.github.io
-  email: ml3109@ic.ac.uk
+  email: luli@hsph.harvard.edu
   twitter: "@lucylmq"
 # you can add more authors here
