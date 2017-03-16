@@ -1,14 +1,14 @@
-- menu_name: "Contact"
+- menu_name: ""
 
-- name: "Contact"
-  url: "/contact/"
-  title: "Contact"
+#- name: "Contact"
+#  url: "/contact/"
+#  title: "Contact"
 
-- name: "RSS"
-  url: "/feed.xml"
-  title: "Subscribe to RSS Feed"
+#- name: "RSS"
+#  url: "/feed.xml"
+#  title: "Subscribe to RSS Feed"
 
 
-- name: "sitemap"
-  url: "/sitemap.xml"
-  title: "Sitemap for Google Webmaster Tools"
+#- name: "sitemap"
+#  url: "/sitemap.xml"
+#  title: "Sitemap for Google Webmaster Tools"
