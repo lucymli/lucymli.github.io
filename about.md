@@ -1,15 +1,25 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: About Me
+permalink: /Bio/
 ---
 
-Some information about you!
+Infectious disease modeler using various statistical methods to infer the dynamics of disease transmission from data
 
-### More Information
+## Research Interests
 
-A place to include any other types of information that you'd like to include about yourself.
+* Dynamic and stochastic models of infectious diseases
+* Statistical inference - how to infer parameters
+* Sequential Monte Carlo methods
+* Phylodynamics - using genetic data to understand how infectious diseases spread
 
-### Contact me
+## Positions
 
-[email@domain.com](mailto:email@domain.com)
+* Postdoctoral research fellow at [Center for Communicable Disease Dynamics](http://ccdd.hsph.harvard.edu/About/Postdocs/Lucy-Li), Harvard T.H. Chan School of Public Health (current)
+
+## Education
+
+* PhD in Infectious Disease Epidemiology at Imperial College London, UK (2013-2017)
+* Computational Biology MPhil with Distinction at University of Cambridge, UK (2012-2013)
+* Biology BSc with First Class Honours at Imperial College London, UK (2009-2012)
+
