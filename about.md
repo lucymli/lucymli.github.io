@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-permalink: /Bio/
+permalink: /about/
 ---
 
 Infectious disease modeler using various statistical methods to infer the dynamics of disease transmission from data
