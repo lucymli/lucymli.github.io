@@ -23,3 +23,11 @@ Infectious disease scientist using multiple sources of data, statistical methods
 * Computational Biology MPhil with Distinction (GPA: 3.95/4.00) @ University of Cambridge, UK (2012-2013)
 * Biology BSc with First Class Honours (GPA: 3.73/4.00) @ Imperial College London, UK (2009-2012)
 
+## Life outside of science
+
+* President of Imperial College Yoga Club (2014-2015)
+* Treasurer of Imperial College Badminton Club (2011-2012)
+* Events Coordinator of Imperial College British Heart Foundation (2011-2012)
+* Volunteer Mandarin Tutor with Imperial College Chinese Students and Scholars Association (2010-2011)
+* Piano tutor (2009)
+* ABRSM Grade 8 Piano 
