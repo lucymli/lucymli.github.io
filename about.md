@@ -4,12 +4,12 @@ title: About Me
 permalink: /about/
 ---
 
-Infectious disease modeler using various statistical methods to infer the dynamics of disease transmission from data
+Infectious disease scientist using multiple sources of data, statistical methods, and stochastic models to understand how pathogens spread.
 
 ## Research Interests
 
 * Dynamic and stochastic models of infectious diseases
-* Statistical inference - how to infer parameters
+* Statistical inference/learning - how to infer unobserved quantities and predict future events
 * Sequential Monte Carlo methods
 * Phylodynamics - using genetic data to understand how infectious diseases spread
 
@@ -19,7 +19,7 @@ Infectious disease modeler using various statistical methods to infer the dynami
 
 ## Education
 
-* PhD in Infectious Disease Epidemiology at Imperial College London, UK (2013-2017)
-* Computational Biology MPhil with Distinction at University of Cambridge, UK (2012-2013)
-* Biology BSc with First Class Honours at Imperial College London, UK (2009-2012)
+* PhD in Infectious Disease Epidemiology @ Imperial College London, UK (2013-2017)
+* Computational Biology MPhil with Distinction (GPA: 3.95/4.00) @ University of Cambridge, UK (2012-2013)
+* Biology BSc with First Class Honours (GPA: 3.73/4.00) @ Imperial College London, UK (2009-2012)
 
