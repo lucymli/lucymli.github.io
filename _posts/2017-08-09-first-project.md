@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Looking back at my first R script
+title: Looking back at my first R scripts
 date: 2017-08-09
 ---
 
@@ -17,7 +17,17 @@ After a couple of quantitative courses in my final year, I joined the Ecology de
 
 Without going into the mathematical details, I simulated competition between two predator species and observed the outcome under various assumptions about the prey carrying capacity (maximum population size), rate of attacking prey, predator death rate, assimilation efficiency (from prey to energy), and immigration rate. 
 
-The first thing that stood out to me while looking over my R code for this project: SO. MANY. FILES.
+The first thing that stood out to me while looking over my <tt>R</tt> code for this project: 
 
-[Exhibit A](https://github.com/lucymli/predator-prey-dynamics/tree/master/R/Results/9.%20Extras) - 15 almost identical files to simulate under 15 different sets of parameter values...
+<center> <bold> SO. MANY. FILES. </bold></center>
 
+[Exhibit A](https://github.com/lucymli/predator-prey-dynamics/tree/master/R/Results/9.%20Extras) - At first glance, this looked like a lot of work. But these 15 files only differed at one line. I copy and pasted the same file 15 times, manually edited one parameter, then ran each file individually to obtain simulations with different parameter values.
+
+Another part of my project was to compare the differences between a deterministic (solving differential equations) and a stochastic model (generating random numbers). Because of the randomness of the stochastic model, multiple simulations were required to understand the average behavior of the model. A simple way to do this is to use <tt>for</tt> loops, which was [what I did](https://github.com/lucymli/predator-prey-dynamics/blob/master/R/Stochastic%202-consumer%20model/Stochastic%202-consumer%20model%201000%20runs.R). Not the most terrible approach, but now that I've learnt about vectorization and parallelization in <tt>R</tt>, these simulations would have taken a fraction of the time. If I were to rewrite this code now, I would just delegate the simulations to <tt>C++</tt> via the [<tt>Rcpp</tt> package](http://www.rcpp.org/).
+
+Finally, the biggest change I've made to my work in <tt>R</tt> has been the switch-over from base graphics to [<tt>ggplot2</tt>](http://ggplot2.tidyverse.org/reference/). Besides being more aesthetically pleasing, the main advantage of using <tt>ggplot2</tt> is the ability to save plots as objects, which allows them to be passed to other functions, saved for later reproducibility, and manipulated later (e.g. to add additional data points). I also like the fact that <tt>ggplot2</tt> forces me to describe the statistics or relationships that I want to visualize, rather than just describing the lines to draw.
+
+From making base R plots like these:
+
+
+To now making complex 
