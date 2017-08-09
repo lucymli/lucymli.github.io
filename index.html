@@ -6,15 +6,17 @@ layout: default
  <br><br>
  Outside of working hours, I occupy myself with yoga, gym, and hiking.
  
+<br><br>
 
 <hr>
 
+<br><br>
 
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-        <h1>Latest blog posts:</h1>
-      <h2><a href="{{ site.baseurl }}{{ posts.url }}">{{ post.title }}</a></h2>
+        <h2>Latest blog posts:</h2>
+      <h3><a href="{{ site.baseurl }}{{ posts.url }}">{{ post.title }}</a></h3>
 
       <div class="entry">
         {{ post.excerpt }}
