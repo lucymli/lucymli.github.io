@@ -8,7 +8,7 @@ Most of my days are spent sitting in front of a computer, debugging C++ code and
 
 This is my first blog post, so I'll start from the beginning with my first foray into the world of maths and computing (my first [R scripts](https://github.com/lucymli/predator-prey-dynamics/tree/master/R) and my first computational project [report](https://github.com/lucymli/predator-prey-dynamics/raw/master/Final%20Year%20Project%20Report.pdf)).
 
-![Meet my Gonorrhea triplets.](https://github.com/lucymli/lucymli.github.io/raw/master/images/gono-triplets.JPG)
+![Meet my Gonorrhea triplets.](https://github.com/lucymli/lucymli.github.io/raw/master/images/gono-triplets.JPG  "Meet my Gonorrhea triplets!")
 
 ---
 
