@@ -29,8 +29,8 @@ Finally, the biggest change I've made to my work in R has been the switch-over f
 
 From making base R plots like this:
 
-![](https://github.com/lucymli/predator-prey-dynamics/raw/master/R/Stochastic%202-consumer%20model/Stochastic%202-consumer%20model.pdf)
+![](https://github.com/lucymli/predator-prey-dynamics/raw/master/R/Stochastic%202-consumer%20model/Stochastic%202-consumer%20model.png)
 
 To multi-layered ggplot2 graphics like this:
 
-![](https://github.com/lucymli/lucymli.github.io/raw/master/images/Multitree.pdf)
+![](https://github.com/lucymli/lucymli.github.io/raw/master/images/Multitree.png)
