@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Looking back at my first R script
+date: 2017-08-09
 ---
 
 Most of my days are spent sitting in front of a computer, debugging C++ code and writing new R functions. The 20 year old me would have never dreamt such a thing possible as I was hanging out with bacteria on petri dishes (although some things never change...). I have since picked up a wide range of mathematical, statistical, and programming skills, enabling me to become a more well-rounded infectious disease scientist. 
