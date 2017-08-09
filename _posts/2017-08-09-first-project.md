@@ -4,11 +4,10 @@ title: Looking back at my first R script
 date: 2017-08-09
 ---
 
-Most of my days are spent sitting in front of a computer, debugging C++ code and writing new R functions. The 20 year old me would have never dreamt such a thing possible as I was hanging out with bacteria on petri dishes (although some things never change...). I have since picked up a wide range of mathematical, statistical, and programming skills, enabling me to become a more well-rounded infectious disease scientist. 
+
+I regularly hung out with bacteria on petri dishes during my undergraduate days. Since then, I have become good friends with all things Bayesian, played around with particle filters, and enthusiastically adopted R Markdown as my notetaking method of choice. I still hang out with pathogens, but only on screen and in the form of plushie toys. This is my first blog post, so I'll start from the beginning with my first foray into the world of maths and computing (my first [R scripts](https://github.com/lucymli/predator-prey-dynamics/tree/master/R) and my first computational project [report](https://github.com/lucymli/predator-prey-dynamics/raw/master/Final%20Year%20Project%20Report.pdf)).
 
 ![Meet my Gonorrhea triplets.](https://github.com/lucymli/lucymli.github.io/raw/master/images/gono-triplets.JPG  "Meet my Gonorrhea triplets!")
-
-This is my first blog post, so I'll start from the beginning with my first foray into the world of maths and computing (my first [R scripts](https://github.com/lucymli/predator-prey-dynamics/tree/master/R) and my first computational project [report](https://github.com/lucymli/predator-prey-dynamics/raw/master/Final%20Year%20Project%20Report.pdf)).
 
 ---
 
