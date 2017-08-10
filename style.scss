@@ -175,7 +175,6 @@ img {
 
   img {
     width: 50%;
-    height: 50%;
     display: block;
     margin: auto;
     border-radius: 5px;
@@ -184,6 +183,7 @@ img {
 
 .site-info {
   text-align: center;
+padding: 70px 0;
   @include mobile {
     float: none;
     display: block;
