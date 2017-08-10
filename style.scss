@@ -165,9 +165,6 @@ text-align: center;
 }
 
 .site-avatar {
-  width: 70px;
-  height: 70px;
-
   @include mobile {
     float: none;
     display: block;
