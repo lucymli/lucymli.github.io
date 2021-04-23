@@ -13,8 +13,8 @@ body {
 }
 
 h1,
-h2,
-h3,
+h2 {text-align: center;},
+h3 {text-align: center;},
 h4,
 h5,
 h6 {
@@ -24,6 +24,11 @@ h6 {
 a {
   outline: none;
 }
+
+div {
+  column-width: 400px;
+}
+
 
 code {
   background-color: rgba(0, 0, 0, 0.02);
