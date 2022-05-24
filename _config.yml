@@ -23,9 +23,10 @@ heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
 email: lucy@lucymli.com
-twitter_username: lucylmq
+twitter_username: 
 linkedin_username: lucymli
 github_username:  lucymli
+gscholar_username: WJdo42cAAAAJ
 reddit_username: /
 behance_username: /
 dribbble_username: /
@@ -40,7 +41,7 @@ disqus-shortname:
 # Name of the Author
 author-name: lucymli
 # URL for the Image of the Author
-author-image: images/headshot.jpg
+author-image: images/lucymli_headshot.jpg
 # 60 Words About the Author
 author-about: Data Scientist specializing in healthcare and public health. Experience in the UK and US, and in academic, non-profit & industry.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
