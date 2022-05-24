@@ -41,7 +41,7 @@ disqus-shortname:
 # Name of the Author
 author-name: Lucy M Li
 # URL for the Image of the Author
-author-image: images/lucymli_headshot.jpg
+author-image: /WhatATheme/assets/images/lucymli_headshot.jpg
 # 60 Words About the Author
 author-about: Data Scientist specializing in healthcare and public health.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
