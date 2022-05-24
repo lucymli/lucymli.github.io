@@ -4,7 +4,7 @@ markdown: kramdown
 # URL of the Site
 url: https://lucymli.github.io
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: 
+baseurl: lucymli.com
 
 # Title of the Site
 title: Lucy M Li
@@ -41,7 +41,7 @@ disqus-shortname:
 # Name of the Author
 author-name: Lucy M Li
 # URL for the Image of the Author
-author-image: images/lucymli_headshot.jpg
+author-image: assets/images/lucymli_headshot.jpg
 # 60 Words About the Author
 author-about: Data Scientist specializing in healthcare and public health.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
