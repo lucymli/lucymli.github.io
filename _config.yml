@@ -44,12 +44,6 @@ author-name: Lucy M Li
 author-image: assets/images/lucymli_headshot.jpg
 # 60 Words About the Author
 author-about: Data Scientist specializing in healthcare and public health.
-# Longer About for the Author
-author-about-long: 
-  - Senior data scientist based in the San Francisco Bay Area available for consulting and short-term projects.
-  - Interests include [mathematical modeling](https://scholar.google.com/citations?hl=en&user=WJdo42cAAAAJ), [machine learning](https://www.fastcompany.com/90523073/how-many-covid-infections-are-undetected-studying-its-mutations-may-hold-the-answer), integrating data sources, and geospatial analysis.
-  - PhD and postdoctoral research experience at Imperial College London and Harvard University in public health/healthcare, specializing in infectious diseases.
-  - Prior full-time work experience in academic, non-profit, and technology organizations.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: lucymli.com
 
