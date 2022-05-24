@@ -4,7 +4,7 @@ markdown: kramdown
 # URL of the Site
 url: https://lucymli.github.io
 # Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl: lucymli.com
+baseurl: https://lucymli.github.io
 
 # Title of the Site
 title: Lucy M Li
