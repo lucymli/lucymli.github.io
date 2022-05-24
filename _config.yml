@@ -39,11 +39,11 @@ google-analytics:
 disqus-shortname: 
 
 # Name of the Author
-author-name: lucymli
+author-name: Lucy M Li
 # URL for the Image of the Author
 author-image: images/lucymli_headshot.jpg
 # 60 Words About the Author
-author-about: Data Scientist specializing in healthcare and public health. Experience in the UK and US, and in academic, non-profit & industry.
+author-about: Data Scientist specializing in healthcare and public health.
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: lucymli.com
 
